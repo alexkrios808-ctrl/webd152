@@ -30,9 +30,11 @@ header {
  header a {
     text-decoration: none; /* txd */
  }
- header a:link,
+ header a:link {
+    color: #ffffff
+ }
  header a:visited {
-    color: #fff; /* c#fff */
+    color: #ffffff; /* c#ffffff */
  }
  header a:hover {
     color: #90c7e3; /* c#90c7e3 */
@@ -40,8 +42,7 @@ header {
 nav {
     font-size: 120%; /* increases font size by 120% */
     font-weight: bold; /* makes nav text bold */
-    padding: 0; /* space around nav content */
-    text-align: center; /* centers nav text */
+    padding: 1.5em; /* p1.5em */
 }
 nav ul {
     list-style-type: none;    /* Removes the default bullet points */
@@ -54,6 +55,7 @@ nav ul {
     box-sizing: border-box;   /* Includes padding and border inside the width of the list */
     flex-wrap: wrap;          /* Allows items to move to a new line if needed */
 }
+
 nav li {
     border-bottom: 1px solid #003; /* Adds a bottom border to each list item */
     padding: 0.5rem 0; /* Adds vertical padding to each list item */
@@ -63,6 +65,7 @@ nav li {
 nav a {
    text-decoration: none; /* td:none */
 }
+
 nav a:link {
     color: #5c7fa3; /* c#5c7fa3 */
 }
@@ -76,24 +79,23 @@ main {
     background-color: #fff; /* bgc#fff */
     padding: 0.0625rem 1.25rem 1.25rem 1.875rem; /* pl-20-20-30 */
 }
-section {
-  padding: 1rem 0; /* p1rem-0 */
-}
+
 h1,
 h2,
 h3,
-footer {font-family: Georgia, "Times New Roman", serif; /* fft */
+footer {
+    font-family: Georgia, "Times New Roman", serif; /* fft */
 }
 h1 {
-    letter-spacing: 0.25em; /* lts.25em */
+    letter-spacing: 0.25em; /* ls:0.25em */
     margin-bottom: 0; /* mb0 */
     margin-top: 0; /* mt0 */
 }
 h2 {
-    color: #1976d2; /* c#1976d2 */
-    text-shadow: 1px 1px 1px #ccc; /* ts:1px */
+    color: #39c; /* c#39c */
+    text-shadow: 1px 1px 1px #ccc; /* ts:1px 1px 1px #ccc */
 }
-h3{
+h3 {
   color: #003; /* c#003 */
 }
 address {
@@ -109,16 +111,17 @@ footer {
   overflow-wrap: break-word; /* Allows long words to be broken and wrapper onto the next line */
 }
 .resort {
-    color: #1976d2; /* c#1976d2 */
+    color: #5c7fa3; /* c#5c7fa3 */
     font-weight: bold; /* fwb */
 }
-#homehero
-#yurthero
+#homehero,
+#yurthero,
 #trailhero {
     background-repeat: no-repeat; /* bgr:norepeat */
     background-size: cover; /* bgs:cover */
     height: 18.75rem; /* h:18.75rem */
 }
+
 #homehero {
     background-image: url(images/coast2.jpg); /*bgimg:url(images/coast2.jpg) */
 }
@@ -142,38 +145,40 @@ footer {
   overflow-wrap: break-word; /*Allows long words to be broken and wrapped onto the next line */
 }
 .sr-only {
-  position: absolute; /* d:flex */
-  width: 1px; /* w:1px */
-  height: 1px; /* h:1px */
-  padding: 0; /* h:1px */
-  margin: -1px; /* m:hidden */
-  overflow: hidden; /* o:hidden */
-  clip: rect (0, 0, 0, 0,); /* clip:rect(0, 0, 0, 0) */
-  border: 0; /* bd:0 */
+    position: absolute; /* pos:absolute */
+    width: 1px; /* w:1px */
+    height: 1px; /* h:1px */
+    padding: 0; /* p:0 */
+    margin: -1px; /* m:-1px */
+    overflow: hidden; /* o:hidden */
+    clip: rect (0, 0, 0, 0); /* clip:rect (0, 0, 0, 0) */
+    border: 0; /* bd:0 */
 }
 /* Table Styles */
-table {
+table{
   border: 0.125rem solid #1976d2; /* bd:0.125rem solid #003 */
   border-collapse: collapse; /* bc:collapse */
   width: 100%; /* w:100% */
 }
 
 th {
-    background-color: #1976d2; /* bgc:#1976d2 */
-    color: #fff; /* c:#fff */
-}
+  background-color: #1976d2; /* bgc:#1976d2 */
+  color: #fff; /* c:#fff */
+} 
 
 td, th {
- border:0.125rem solid #1976d2; /* bd:0.125 solid #1976d2 */
- padding: 0.5rem; /* p:0.5rem */
+  border: 0.125rem solid #1976d2; /* bd:0.125rem solid #1976d2 */
+  padding: 0.5rem; /* p:0.5rem */
 }
-td { text-align: center; /* ta:center */ }
-.text{
-  text-align: left; /* ta: left */
+td { text-align: content; /* ta:center */ }
+.text {
+  text-align: left; /* ta:left */
 }
 tr:nth-of-type(odd) {
-  background-color: #ffcd6f /* bgc: #ffcd6f */
+  background-color: #ffcd6f; /* bgc:#ffcd6f */
 }
+
+
 @media  (max-width: 32.5rem) {
   body  {
     background-image: none; 
@@ -194,9 +199,9 @@ tr:nth-of-type(odd) {
   footer {
     padding: 1em; /* p:lem */
   }
-   #special table {
+  #special table{
     margin: 0 auto;
-   }
+  }
   #special td, #special th {
     display: block;
     width: 100%;
@@ -205,27 +210,27 @@ tr:nth-of-type(odd) {
     height: 0;
     margin: 0;
     padding: 0;
-    font-size: 0.625rem;
+    font-size: 0.625;
     border: none;
     overflow: hidden;
   }
   td.package::before {
     content: "Package: ";
   }
-  td.description::before{
+  td.description::before {
     content: "Description: ";
   }
-  td.nights::before{
+  td.nights::before {
     content: "Nights: ";
   }
-  td.cost::before{
-    content: "Cost";
+  td.cost::before {
+    content: "Cost: ";
   }
   .package, .description, .nights, .cost {
     width: 100%;
     padding-left: 35%;
     position: relative;
-    text-align-last: left;
+    text-align: left;
   }
   td::before {
     width: 25%;
@@ -238,14 +243,19 @@ tr:nth-of-type(odd) {
     font-weight: bold;
     white-space: nowrap;
   }
+   
+}
 
-  }
-
-@media  (max-width: 37.5rem) {
+@media  (min-width: 37.5rem) {
   nav ul  {
     flex-direction: row; /* fd:row */
     justify-content: center; /* jc:center */
     align-items: center; /* ai:center */
+  }
+  nav li {
+    border-bottom: none; /* bb:none */
+    padding: 0 1rem; /* p:0 1rem */
+    max-width: none; /* mw:none */
   }
 .card-row  {
     flex-direction: row; /* fd:row */
