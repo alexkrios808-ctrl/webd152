@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat; /* bgr */
     border: 1px solid #003;
     box-shadow: 3px 3px 3px #333;    /* bxsd */
-    color: #666;
+    color: #555;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* ffa */
 }
 #wrapper {
@@ -18,7 +18,7 @@ body {
     width: 80%; /* wrapper takes up 80% of viewport width */
 }
 header {
-    background-color: #003; /* dark blue background */  
+    background-color: #000032; /* dark blue background */  
     background-image: url(images/sunset.jpg); /* header image */
     background-position: right; /* image aligned to right */
     background-repeat: no-repeat; /* image does not repeat */
@@ -42,7 +42,7 @@ header {
 nav {
     font-size: 120%; /* increases font size by 120% */
     font-weight: bold; /* makes nav text bold */
-    padding: 1.5em; /* p1.5em */
+    padding: 0em; /* p0em */
 }
 nav ul {
     list-style-type: none;    /* Removes the default bullet points */
@@ -92,8 +92,8 @@ h1 {
     margin-top: 0; /* mt0 */
 }
 h2 {
-    color: #39c; /* c#39c */
-    text-shadow: 1px 1px 1px #ccc; /* ts:1px 1px 1px #ccc */
+    color: #1976d2; /* c#1976d2 */
+    text-shadow: 1px 1px #ccc; /* ts:1px 1px #ccc */
 }
 h3 {
   color: #003; /* c#003 */
@@ -155,7 +155,7 @@ footer {
     padding: 0; /* p:0 */
     margin: -1px; /* m:-1px */
     overflow: hidden; /* o:hidden */
-    clip: rect (0, 0, 0, 0); /* clip:rect (0, 0, 0, 0) */
+    clip: rect(0, 0, 0, 0); /* clip:rect(0, 0, 0, 0) */
     border: 0; /* bd:0 */
 }
 /* Table Styles */
@@ -174,7 +174,7 @@ td, th {
   border: 0.125rem solid #1976d2; /* bd:0.125rem solid #1976d2 */
   padding: 0.5rem; /* p:0.5rem */
 }
-td { text-align: content; /* ta:center */ }
+td { text-align: center; /* ta:center */ }
 .text {
   text-align: left; /* ta:left */
 }
@@ -223,18 +223,15 @@ input[type="submit"] {
   cursor: pointer; /* cur:pointer */
   transition: background 0.2s;
 }
-input[type="submit"]:hover 
+input[type="submit"]:hover, 
 input[type="submit"]:focus {
-  background-color: #003; /* bgc:#003 */
+  background-color: #005; /* bgc:#005 */
 }
 .center {
   display: flex; /* d:flex */
   flex-direction: column; /* fld:column */
   align-items: center; /* ai:center */
-  justify-content: center; /* jc:center */
   text-align: center; /* ta:center */
-  margin: .1em; /* g:0.1em */
-  gap: 1em 0; /* g:1em 0 */
 }
 .center > h2,
 .center > h3,
@@ -272,7 +269,7 @@ input[type="submit"]:focus {
     height: 0;
     margin: 0;
     padding: 0;
-    font-size: 0.625;
+    font-size: 0.625rem;
     border: none;
     overflow: hidden;
   }
@@ -314,6 +311,7 @@ input[type="submit"]:focus {
   form input,
   form textarea {
     width: 100%; /* make all elements full width */
+    display: block;
   }
 
   input[type="submit"] {
