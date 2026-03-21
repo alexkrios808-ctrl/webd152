@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat; /* bgr */
     border: 1px solid #003;
     box-shadow: 3px 3px 3px #333;    /* bxsd */
-    color: #555;
+    color: #666;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* ffa */
 }
 #wrapper {
@@ -266,7 +266,7 @@ input[type="submit"]:focus {
   min-width: 250px; /* minw:250px */
 }
 
-/* Gallery Grid Layout */
+/* gallery Grid Layout */
 .gallery {
   display: grid; /* d:grid */
   gap: 1em; /* g:1em */
@@ -274,7 +274,7 @@ input[type="submit"]:focus {
   margin: 2em 0; /* m:2em 0 */
 }
 
-/* Gallery Image Container */
+/* gallery Image Container */
 .gallery-image {
   position: relative; /* pos:relative */
   overflow: hidden; /* o:hidden */
